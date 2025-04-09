@@ -1,0 +1,54 @@
+---
+import SocialIcon from "../components/SocialIcon.astro"
+---
+
+<section class="flex flex-col mx-auto px-4 md:max-w-5xl 2xl:max-w-7xl pt-8 md:pt-14 items-center">
+  <div class="flex justify-center w-[100vh]">
+    <div class="flex flex-col">
+        <img class="overflow-hidden rounded-2xl " src="/src/assets/Avatar.jpg" alt="Avatar">
+    </div>
+    <div class="ml-4"> 
+      <h1 class="text-4xl font-medium mb-2">Welcome! 👋</h1>
+      <h2 class="text-3xl mb-1.5">
+        I'm Deigo
+      </h2>
+      <p class="text/lg font-light mb-1">
+        A Full-Stack Student based in Spain.
+      </p>
+      <p class="text/lg font-light">
+        Willing to learn new Technologies and improve my skills.
+      </p>
+      <div class="flex mt-2">
+        <button onclick="window.open('/resume.pdf', '_blank')" class="items-center flex mr-2 border-2 w-25 rounded-xl cursor-pointer hover:scale-110"> <img class="ml-2 mr-2 w-4" src="/src/assets/fileDownload.svg" alt=""> Resume</button>
+        <SocialIcon platform="instagram" href="https://www.instagram.com/dnmora_014/" />
+        <SocialIcon platform="github" href="https://github.com/dedo637" />
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-col items-center w-[100vh] mt-10">
+    <div class="flex w-154 border-2 rounded-[10px] justify-center">
+      <button class="w-[50%] rounded-[5px] p-1 m-1 cursor-pointer">Work</button>
+      <button class="w-[50%] rounded-[5px] p-1 m-1 cursor-pointer">Education</button>
+    </div>
+    <div class="flex flex-col education border-2 w-154 mt-2 rounded-[10px]">
+      <div class="flex w-[100%] m-4 items-center">
+        <img class="rounded-[100%] w-15 h-15 border" src="" alt="IES Infanta Elena">
+        <div class="pl-10">
+          <p>Septembre 2024 - june 2026</p>
+          <h2>DAW</h2>
+          <p>IES Infanta Elena</p>
+        </div>
+      </div>
+      <div class="flex w-[100%] m-4 items-center">
+        <img class="rounded-[100%] w-15 h-15 border" src="" alt="ISEP CEU">
+        <div class="pl-10">
+          <p>Septembre 2020 - june 2023</p>
+          <h2>SMR</h2>
+          <p>ISEP CEU</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
