@@ -1,14 +1,19 @@
+---
+import Home from '../components/HomeButton.astro'
+import Footer from '../components/footer.astro';
+import "../styles/global.css";
+---
 
 <!doctype html>
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
 		<title>Dedo637</title>
 	</head>
 	<body class="margin-0 height-100vh width-100vh">
 		<slot />
+		<Home />
+		<Footer />
 	</body>
 </html>
 
@@ -17,7 +22,7 @@
 	body {
 		color: white;
 		background-color: #05121a;
-		background-image: url('/topography.svg');
+		background-image: url('/svgs/topography.svg');
 		margin: 0;
 		width: 100%;
 		height: 100%;
