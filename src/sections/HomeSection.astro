@@ -1,16 +1,17 @@
 ---
+import { skills } from "../data/skilsData.ts";
 import SocialIcon from "../components/SocialIcon.astro"
 ---
 
 <section class="flex flex-col mx-auto px-4 pt-8 items-center">
-  <div class="flex justify-center w-[100vh]">
+  <div class="flex justify-center">
     <div class="flex flex-col">
         <img class="overflow-hidden rounded-2xl" src="/images/avatar.webp" alt="Avatar">
     </div>
     <div class="ml-4"> 
       <h1 class="text-4xl font-medium mb-2">Welcome! 👋</h1>
       <h2 class="text-3xl mb-1.5">
-        I'm Deigo
+        I'm Diego
       </h2>
       <p class="text/lg font-light mb-1">
         A Full-Stack Student based in Spain.
@@ -25,30 +26,39 @@ import SocialIcon from "../components/SocialIcon.astro"
       </div>
     </div>
   </div>
-  <div class="flex flex-col items-center w-[100vh] mt-10">
-    <div class="flex w-154 border-2 rounded-[10px] justify-center">
+  <div class="flex flex-col items-center w-[80vh] mt-5">
+    <nav class="flex border-2 rounded-[10px] w-[100%] justify-center">
       <button class="w-[50%] rounded-[5px] p-1 m-1 cursor-pointer">Work</button>
       <button class="w-[50%] rounded-[5px] p-1 m-1 cursor-pointer bg-[#7b7b7c]">Education</button>
-    </div>
-    <div class="flex flex-col education border-2 w-154 mt-2 rounded-[10px]">
-      <div class="flex w-[100%] m-4 items-center">
+    </nav>
+    <div class="flex flex-col education border-2 mt-2 rounded-[10px] w-[100%]">
+      <div class="flex w-[100%] m-5 items-center">
         <img class="rounded-[100%] size-[10%] border-2 overflow-hidden" src="/svgs/IE.svg" alt="IES Infanta Elena">
-        <div class="pl-10">
-          <p>Septembre 2024 - june 2026</p>
-          <h2>DAW</h2>
+        <div class="pl-5">
+          <h2 class="text-2xl">DAW</h2>
           <p>IES Infanta Elena</p>
+          <p>Septembre 2024 - june 2026</p>
         </div>
       </div>
-      <div class="flex w-[100%] m-4 items-center">
+      <div class="flex w-[100%] m-5 items-center">
         <img class="rounded-[100%] size-[10%] border-2 overflow-hidden" src="/svgs/CEU.svg" alt="ISEP CEU">
-        <div class="pl-10">
-          <p>Septembre 2020 - june 2023</p>
-          <h2>SMR</h2>
+        <div class="pl-5">
+          <h2 class="text-2xl">SMR</h2>
           <p>ISEP CEU</p>
+          <p>Septembre 2020 - june 2023</p>
         </div>
       </div>
     </div>
   </div>
-
-
+  <div class="flex flex-col items-start w-[80vh] mt-5">
+    <h1 class="text-3xl w-[100%] pb-2 border-b-2 mb-1">Skills</h1>
+    <div class="flex flex-wrap w-[100%] mt-2">
+      {skills.map((skill)=>(
+      <div 
+        id={skill.name} 
+        class="bg-[#05121a] px-3 py-0.5 text-white rounded m-1 border-1 border-gray-400">
+        {skill.name}
+      </div>
+      ))}
+  </div>
 </section>
